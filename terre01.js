@@ -1,2 +1,3 @@
 const args = process.argv;
-console.log(args[1]);
+const arr = args[1].split('/');
+console.log(arr[arr.length - 1]);
