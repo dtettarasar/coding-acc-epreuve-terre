@@ -5,7 +5,7 @@ let str = "";
 
 
 for (let i = 0; i < alphabet.length; i++) {
-    str += alphabet[i]
+    str += alphabet[i];
 }
 
 
