@@ -15,6 +15,19 @@ const getRemainingLetters = (letter) => {
     let letterFound = false;
     const container = [];
     console.log(letter);
+
+    for (let i = 0; i < alphabet.length; i++) {
+        
+        if (letter == alphabet[i]) {
+            letterFound = true;
+        }
+        
+        if (letterFound) {
+            container.push(alphabet[i]);
+        }
+
+    }
+    
     return container;
 }
 
@@ -23,5 +36,5 @@ if (args.length != 1 || !argTester) {
     console.log("Exemple : node terre03.js a");
     return false;
 } else {
-    getRemainingLetters(args[0]);
+    console.log(getRemainingLetters(args[0]));
 }
