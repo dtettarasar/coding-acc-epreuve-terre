@@ -32,7 +32,7 @@ const getRemainingLetters = (letter) => {
 }
 
 if (args.length != 1 || !argTester) {
-    console.log("Veuillez saisir une lettre minuscule");
+    console.log("Veuillez passer une lettre minuscule en argument");
     console.log("Exemple : node terre03.js a");
     return false;
 } else {
