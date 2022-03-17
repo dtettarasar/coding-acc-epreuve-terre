@@ -14,21 +14,20 @@ console.log(argTester);
 const getRemainingLetters = (letter) => {
     let letterFound = false;
     const container = [];
-    console.log(letter);
+    //console.log(letter);
 
     for (let i = 0; i < alphabet.length; i++) {
         
         if (letter == alphabet[i]) {
             letterFound = true;
-        }
-        
-        if (letterFound) {
+            container.push(alphabet[i]);
+        } else if (letterFound) {
             container.push(alphabet[i]);
         }
 
     }
     
-    return container;
+    return container.join('');
 }
 
 if (args.length != 1 || !argTester) {
