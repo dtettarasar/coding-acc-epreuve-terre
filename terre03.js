@@ -37,4 +37,5 @@ if (args.length != 1 || !argTester) {
     return false;
 } else {
     console.log(getRemainingLetters(args[0]));
+    return true;
 }
