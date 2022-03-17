@@ -6,9 +6,14 @@ const argTester = pattern.test(args[0]);
 
 const evenOrOdd = () => {
 
-    const strToInt = parseInt(args[0]);
+    let strToInt = parseInt(args[0]);
     // console.log(typeof(args[0]));
     // console.log(typeof(strToInt));
+
+    if (strToInt < 0) {
+        strToInt = strToInt * -1;
+    }
+
     const modulo = strToInt % 2;
     // console.log(modulo);
 
