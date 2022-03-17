@@ -6,9 +6,17 @@ const argTester = pattern.test(args[0]);
 
 const evenOrOdd = () => {
 
-    console.log(typeof(args[0]));
     const strToInt = parseInt(args[0]);
-    console.log(typeof(strToInt));
+    // console.log(typeof(args[0]));
+    // console.log(typeof(strToInt));
+    const modulo = strToInt % 2;
+    // console.log(modulo);
+
+    if (modulo == 1) {
+        console.log("impair");
+    } else {
+        console.log("pair");
+    }
 
 }
 
