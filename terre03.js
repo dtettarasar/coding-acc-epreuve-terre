@@ -20,8 +20,9 @@ const getRemainingLetters = (letter) => {
         
         if (letter == alphabet[i]) {
             letterFound = true;
-            container.push(alphabet[i]);
-        } else if (letterFound) {
+        }
+        
+        if (letterFound) {
             container.push(alphabet[i]);
         }
 
