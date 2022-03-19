@@ -19,6 +19,17 @@ const divider = (dividende, diviseur) => {
   console.log("dividende: " + intDividende);
   console.log("diviseur: " + intDiviseur);
 
+  const posDividende = intDividende < 0 ? intDividende * -1 : intDividende;
+  const posDiviseur = intDiviseur < 0 ? intDiviseur * -1 : intDiviseur;
+
+  console.log(posDividende);
+  console.log(posDiviseur);
+
+  if (posDiviseur > posDividende) {
+    console.log("Attention: le diviseur doit être inférieur au dividende, indépendamment du signe !");
+    return false;
+  }
+
 }
 
 const argTester = () => {
