@@ -25,8 +25,11 @@ const divider = (dividende, diviseur) => {
   console.log(posDividende);
   console.log(posDiviseur);
 
-  if (posDiviseur > posDividende) {
+  if (posDiviseur > posDividende && posDividende != 0) {
     console.log("Attention: le diviseur doit être inférieur au dividende, indépendamment du signe !");
+    return false;
+  } else if (posDiviseur == 0) {
+    console.log("Attention: le diviseur doit être différent de 0 !");
     return false;
   }
 
