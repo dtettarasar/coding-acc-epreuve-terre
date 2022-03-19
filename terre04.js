@@ -10,6 +10,7 @@ const evenOrOdd = () => {
     // console.log(typeof(args[0]));
     // console.log(typeof(strToInt));
 
+    //convert negative int to positive
     if (strToInt < 0) {
         strToInt = strToInt * -1;
     }
