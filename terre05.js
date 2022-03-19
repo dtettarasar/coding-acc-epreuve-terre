@@ -44,10 +44,9 @@ const argTester = () => {
       console.log("Veuillez passer deux nombres entiers en argument (le dividende, puis le diviseur)");
       console.log("Exemple : node terre05.js 10 2");
       return false;
-  } else {
-      //divider(args[0], args[1]);
-      return true;
   }
+
+  return true;
 
 }
 
