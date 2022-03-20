@@ -12,7 +12,7 @@ const main = () => {
 }
 
 const divider = (dividende, diviseur) => {
-
+    /*
   const intDividende = parseInt(dividende);
   const intDiviseur = parseInt(diviseur);
 
@@ -32,6 +32,7 @@ const divider = (dividende, diviseur) => {
     console.log("Attention: le diviseur doit être différent de 0 !");
     return false;
   }
+  */
 
 }
 
@@ -45,6 +46,12 @@ const argTester = () => {
       console.log("Exemple : node terre05.js 10 2");
       return false;
   }
+
+  const intDividende = parseInt(args[0]);
+  const intDiviseur = parseInt(args[1]);
+
+  console.log("dividende: " + intDividende);
+  console.log("diviseur: " + intDiviseur);
 
   return true;
 
