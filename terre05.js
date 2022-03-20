@@ -8,15 +8,22 @@ const main = () => {
   const arguments = argTester();
 
   if (arguments) {
-    divider(arguments);
+    const result = divider(arguments);
+    console.log("résultat: " + result.quotient);
+    console.log("reste: " + result.reste);
   }
 
 }
 
 const divider = (argObj) => {
-    console.log("divider()");
-    console.log(argObj);
-    return false;
+
+    const result = {};
+
+    result.quotient = Math.floor(argObj.dividende / argObj.diviseur);
+    result.reste = argObj.dividende % argObj.diviseur;
+
+    return result;
+
 }
 
 const argTester = () => {
