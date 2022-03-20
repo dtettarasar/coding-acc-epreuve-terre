@@ -5,14 +5,17 @@ const pattern = /^-?[0-9]+$/;
 
 const main = () => {
 
-  if (argTester()) {
-    divider(args[0], args[1]);
+  const arguments = argTester();
+
+  if (arguments) {
+    divider(arguments);
   }
 
 }
 
-const divider = (dividende, diviseur) => {
+const divider = (argObj) => {
     console.log("divider()");
+    console.log(argObj);
     return false;
 }
 
@@ -20,6 +23,8 @@ const argTester = () => {
 
   const testDividende = pattern.test(args[0]);
   const testDiviseur = pattern.test(args[1]);
+
+  const arguments = {};
 
   if (args.length != 2 || !testDividende || !testDiviseur) {
       console.log("Veuillez passer deux nombres entiers en argument (le dividende, puis le diviseur)");
@@ -30,14 +35,14 @@ const argTester = () => {
   const intDividende = parseInt(args[0]);
   const intDiviseur = parseInt(args[1]);
 
-  console.log("dividende: " + intDividende);
-  console.log("diviseur: " + intDiviseur);
+  //console.log("dividende: " + intDividende);
+  //console.log("diviseur: " + intDiviseur);
 
   const posDividende = intDividende < 0 ? intDividende * -1 : intDividende;
   const posDiviseur = intDiviseur < 0 ? intDiviseur * -1 : intDiviseur;
 
-  console.log(posDividende);
-  console.log(posDiviseur);
+  //console.log(posDividende);
+  //console.log(posDiviseur);
 
   if (posDiviseur > posDividende && posDividende != 0) {
     console.log("Attention: le diviseur doit être inférieur au dividende, indépendamment du signe !");
@@ -47,8 +52,13 @@ const argTester = () => {
     return false;
   }
 
-  console.log("arguments valides");
-  return true;
+  arguments.dividende = intDividende;
+  arguments.diviseur = intDiviseur;
+
+  //console.log("arguments valides:");
+  //console.log(arguments);
+
+  return arguments;
 
 }
 
