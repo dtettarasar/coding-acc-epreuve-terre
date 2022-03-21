@@ -2,10 +2,19 @@
 
 const main = () => {
 
+    let result = "";
+
     const argument = argTester();
 
-    console.log(argument);
+    if (argument) {
+        result = getReverseStr(argument);
+        console.log(result);
+    }
 
+}
+
+const getReverseStr = (str) => {
+    return str;
 }
 
 const argTester = () => {
