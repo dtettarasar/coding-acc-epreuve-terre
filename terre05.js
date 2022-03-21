@@ -1,8 +1,5 @@
 // Exercice 6 : Divisions
 
-const args = process.argv.slice(2);
-const pattern = /^-?[0-9]+$/;
-
 const main = () => {
 
   const arguments = argTester();
@@ -27,6 +24,9 @@ const divider = (argObj) => {
 }
 
 const argTester = () => {
+
+  const args = process.argv.slice(2);
+  const pattern = /^-?[0-9]+$/;
 
   const testDividende = pattern.test(args[0]);
   const testDiviseur = pattern.test(args[1]);
