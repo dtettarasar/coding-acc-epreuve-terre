@@ -18,7 +18,7 @@ const argTester = () => {
         return false;
     }
 
-    return args;
+    return args[0];
 
 }
 
