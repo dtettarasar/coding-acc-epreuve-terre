@@ -25,9 +25,9 @@ const getReverseStr = (str) => {
     }
 
     //console.log(strArr);
-    console.log(revStrArr);
+    //console.log(revStrArr);
 
-    return str;
+    return revStrArr.join('');
 }
 
 const argTester = () => {
