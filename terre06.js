@@ -14,6 +14,11 @@ const main = () => {
 }
 
 const getReverseStr = (str) => {
+
+    const strArr = str.split('');
+    
+    console.log(strArr);
+
     return str;
 }
 
