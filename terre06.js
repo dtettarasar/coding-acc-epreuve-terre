@@ -16,8 +16,16 @@ const main = () => {
 const getReverseStr = (str) => {
 
     const strArr = str.split('');
+
+    const revStrArr = [];
     
-    console.log(strArr);
+    for (let i = strArr.length - 1; i >= 0; i--) {
+        //console.log(strArr[i]);
+        revStrArr.push(strArr[i]);
+    }
+
+    //console.log(strArr);
+    console.log(revStrArr);
 
     return str;
 }
