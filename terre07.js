@@ -1,10 +1,20 @@
 // Exercice 8 : Taille d'une chaîne
 
 const main = () => {
-    
+
     const argument = argTester();
 
-    console.log(argument);
+    const result = getLength(argument);
+
+    console.log(result);
+
+}
+
+const getLength = (str) => {
+
+  const strArr = str.split("");
+
+  return strArr;
 
 }
 
@@ -21,7 +31,7 @@ const argTester = () => {
         console.log("Exemple : node terre07.js 'Freak on a Leash'");
 
         return false;
-    } 
+    }
     return args[0];
 
 }
