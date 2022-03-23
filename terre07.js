@@ -4,9 +4,10 @@ const main = () => {
 
     const argument = argTester();
 
-    const result = getLength(argument);
-
-    console.log(result);
+    if (argument) {
+        const result = getLength(argument);
+        console.log(result);
+    }
 
 }
 
@@ -14,7 +15,13 @@ const getLength = (str) => {
 
   const strArr = str.split("");
 
-  return strArr;
+  let i = 0;
+
+  while (i != strArr.length) {
+    i++;
+  }
+
+  return i;
 
 }
 
