@@ -5,13 +5,39 @@ const main = () => {
     const argument = argTester();
 
     if(argument) {
-        console.log(argument);
+
+        const result = getSquareRoot(argument);
+
+        if (result) {
+            console.log(result);
+        } else {
+            console.log("La racine carrée de " + argument + " n'est pas un nombre rationnel.");
+        }
+
     }
 
 }
 
-const getSquareRoot = () => {
+const getSquareRoot = (arg) => {
 
+    const int = parseInt(arg);
+
+    for (let i = 1; i <= int; i++) {
+        const tester = i*i;
+        // console.log(i);
+        // console.log(tester);
+        // console.log("---");
+        
+        if (tester == int) {
+            return i;
+        }
+
+    }
+
+    //console.log(int);
+
+    return false;
+    
 }
 
 const argTester = () => {
