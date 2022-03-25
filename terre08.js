@@ -3,7 +3,18 @@ const main = () => {
 
     const argument = argTester();
 
-    console.log(argument);
+    if (argument) {
+
+        calculPuissance(argument[0], argument[1]);
+
+    }
+
+}
+
+const calculPuissance = (firstNum, expos) => {
+
+    console.log("first num:" + firstNum);
+    console.log("expos:" + expos);
 
 }
 
