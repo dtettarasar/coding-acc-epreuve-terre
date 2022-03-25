@@ -20,7 +20,8 @@ const argTester = () => {
     const pattern = /^[0-9]+$/;
 
     if (args.length != 1 || !pattern.test(args[0])) {
-        console.log("error");
+        console.log("Veuillez passer un entier positif en argument");
+        console.log("Exemple : node terre09.js 9");
         return false;
     }
 
