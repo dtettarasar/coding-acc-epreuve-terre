@@ -21,7 +21,8 @@ const argTester = () => {
   const testExpos = patternPosOnly.test(expos);
 
   if (args.length != 2 || !testFirstNum || !testExpos) {
-    console.log("error");
+    console.log("Veuillez passer deux nombres en arguments (l'exposant est passé en deuxième et doit être positif)");
+    console.log("Exemple : node terre08.js 2 3");
     return false;
   }
 
