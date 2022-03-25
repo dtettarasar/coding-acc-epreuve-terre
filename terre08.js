@@ -5,7 +5,8 @@ const main = () => {
 
     if (argument) {
 
-        calculPuissance(argument[0], argument[1]);
+        const result = calculPuissance(argument[0], argument[1]);
+        console.log(result);
 
     }
 
@@ -13,8 +14,25 @@ const main = () => {
 
 const calculPuissance = (firstNum, expos) => {
 
-    console.log("first num:" + firstNum);
-    console.log("expos:" + expos);
+    const firstNumInt = parseInt(firstNum) < 0 ? parseInt(firstNum) * -1 : parseInt(firstNum);
+    const exposInt = parseInt(expos);
+    const isFirstNumNeg = parseInt(firstNum) < 0 ? true : false;
+    
+    let result = expos == 0 ? 1 : firstNumInt;
+
+    // console.log("first num:" + firstNumInt);
+    // console.log("expos:" + exposInt);
+
+    for (let i = 1; i < exposInt; i++) {
+        result *= firstNumInt;
+        // console.log(result);
+    }
+
+    if (isFirstNumNeg) {
+        result *= -1;
+    }
+
+    return result;
 
 }
 
