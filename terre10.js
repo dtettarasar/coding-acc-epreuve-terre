@@ -15,6 +15,10 @@ const main = () => {
 
 const isPrimeNumber = (int) => {
 
+    for (let i = int; i >= 0; i--){
+        console.log(i);
+    }
+
     return int;
 
 }
