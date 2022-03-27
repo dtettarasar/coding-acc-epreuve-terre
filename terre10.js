@@ -4,7 +4,19 @@ const main = () => {
 
     const argument = argTester();
 
-    console.log(argument);
+    if (argument) {
+        
+        const result = isPrimeNumber(argument);
+        console.log(result);
+
+    }
+
+}
+
+const isPrimeNumber = (int) => {
+
+    return int;
+
 }
 
 const argTester = () => {
@@ -18,7 +30,7 @@ const argTester = () => {
         return false;
     }
 
-    return argument;
+    return parseInt(argument);
 
 }
 
