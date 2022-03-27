@@ -37,6 +37,10 @@ const isPrimeNumber = (int) => {
             divider.push(i);
         }
 
+        if (divider.length > 2) {
+            break;
+        }
+
     }
 
     // console.log("divider: ");
