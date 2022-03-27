@@ -12,13 +12,19 @@ const main = () => {
         result = isPrimeNumber(argument);
     }
 
-    console.log("result: " + result);
+    // console.log("result: " + result);
+
+    if (result) {
+    	 console.log("Oui, " + argument + " est un nombre premier.");
+    } else {
+	     console.log("Non, " + argument + " n'est pas un nombre premier.");
+    }
 
 }
 
 const isPrimeNumber = (int) => {
 
-    console.log(int);
+    // console.log(int);
 
     if (int == 1) {
         return false;
