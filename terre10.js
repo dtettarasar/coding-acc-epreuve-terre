@@ -17,13 +17,21 @@ const isPrimeNumber = (int) => {
 
     const divider = [];
 
-    for (let i = int; i >= 0; i--){
+    for (let i = int; i > 0; i--){
 
         const modulo = int % i;
         console.log("i: " + i);
         console.log("modulo: " + modulo);
         console.log("---");
+
+        if (modulo == 0) {
+            divider.push(i);
+        }
+
     }
+
+    console.log("divider: ");
+    console.log(divider);
 
     return int;
 
