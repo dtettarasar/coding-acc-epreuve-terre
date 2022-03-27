@@ -4,25 +4,34 @@ const main = () => {
 
     const argument = argTester();
 
-    if (argument) {
-        
-        const result = isPrimeNumber(argument);
-        console.log(result);
+    let result = null;
 
+    if (argument == 0) {
+        result = false;
+    } else if (argument) {
+        result = isPrimeNumber(argument);
     }
+
+    console.log("result: " + result);
 
 }
 
 const isPrimeNumber = (int) => {
+
+    console.log(int);
+
+    if (int == 1) {
+        return false;
+    }
 
     const divider = [];
 
     for (let i = int; i > 0; i--){
 
         const modulo = int % i;
-        console.log("i: " + i);
-        console.log("modulo: " + modulo);
-        console.log("---");
+        // console.log("i: " + i);
+        // console.log("modulo: " + modulo);
+        // console.log("---");
 
         if (modulo == 0) {
             divider.push(i);
@@ -30,10 +39,14 @@ const isPrimeNumber = (int) => {
 
     }
 
-    console.log("divider: ");
-    console.log(divider);
+    // console.log("divider: ");
+    // console.log(divider);
 
-    return int;
+    if (divider.length == 2 && divider[0] == int && divider[1] == 1) {
+        return true;
+    } else {
+        return false;
+    }
 
 }
 
