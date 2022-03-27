@@ -10,9 +10,11 @@ const main = () => {
 const argTester = () => {
 
     const argument = process.argv.slice(2);
+    const pattern = /^[0-9]+$/;
 
-    if (argument.length != 1) {
-        console.log("error");
+    if (argument.length != 1 || !pattern.test(argument)) {
+        console.log("Veuillez passer un entier positif en argument");
+        console.log("Exemple : node terre10.js 10");
         return false;
     }
 
