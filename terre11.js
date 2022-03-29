@@ -2,7 +2,7 @@
 
 const main = () => {
 
-    console.log("hello world");
+    // console.log("hello world");
     const argument = argTester();
     // console.log(argument);
 }
@@ -22,6 +22,22 @@ const argTester = () => {
 
     // console.log("test argument:");
     // console.log(pattern.test(argument[0]));
+
+    const argArr = argument[0].split(":");
+
+    const hours = parseInt(argArr[0]);
+    const minutes = parseInt(argArr[1]);
+
+    console.log(argArr);
+    console.log("hours: " + hours);
+    console.log("minutes: " + minutes);
+    
+    if (hours > 24 || minutes >= 60) {
+
+        console.log("heure incorrecte");
+        return false;
+
+    }
 
     return argument;
 
