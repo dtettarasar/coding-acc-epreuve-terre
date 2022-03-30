@@ -4,10 +4,18 @@ const main = () => {
 
     // console.log("hello world");
     const argument = argTester();
-    
+
     if (argument) {
-        console.log(argument);
+        
+        const result = convertTime(argument);
+
     }
+
+}
+
+const convertTime = (time) => {
+
+    console.log(time);
 
 }
 
