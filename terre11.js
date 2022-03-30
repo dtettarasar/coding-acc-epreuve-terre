@@ -4,7 +4,11 @@ const main = () => {
 
     // console.log("hello world");
     const argument = argTester();
-    // console.log(argument);
+    
+    if (argument) {
+        console.log(argument);
+    }
+
 }
 
 const argTester = () => {
@@ -30,18 +34,18 @@ const argTester = () => {
     time.hours = parseInt(argArr[0]);
     time.minutes = parseInt(argArr[1]);
 
-    console.log(argArr);
-    console.log("hours: " + time.hours);
-    console.log("minutes: " + time.minutes);
+    // console.log(argArr);
+    // console.log("hours: " + time.hours);
+    // console.log("minutes: " + time.minutes);
     
-    if (time.hours > 24 || time.minutes >= 60) {
+    if (time.hours > 24 || time.minutes >= 60 || time.hours == 24 && time.minutes != 00) {
 
         console.log("heure incorrecte");
         return false;
 
     }
 
-    return argument;
+    return time;
 
 }
 
