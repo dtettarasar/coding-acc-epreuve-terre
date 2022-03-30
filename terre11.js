@@ -8,6 +8,7 @@ const main = () => {
     if (argument) {
         
         const result = convertTime(argument);
+        console.log(result);
 
     }
 
@@ -15,7 +16,18 @@ const main = () => {
 
 const convertTime = (time) => {
 
-    console.log(time);
+    // console.log(time);
+
+    let anteOrPostMeridiem = time.hours > 12 ? "PM" : "AM";
+    let hoursTwelve = time.hours > 12 ? time.hours - 12 : time.hours;
+    let minutesTwelve = time.minutes > 10 ? time.minutes : "0" + time.minutes;
+
+    let timeTwelve = hoursTwelve + ":" + minutesTwelve + anteOrPostMeridiem;
+
+    // console.log("timeTwelve");
+    // console.log(timeTwelve);
+
+    return timeTwelve;
 
 }
 
