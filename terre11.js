@@ -10,7 +10,7 @@ const main = () => {
 const argTester = () => {
 
     const argument = process.argv.slice(2);
-    const pattern = /^[0-9]{1,2}:[0-9]{1,2}$/;    
+    const pattern = /^[0-9]{1,2}:[0-9]{2}$/;    
 
     if (argument.length != 1 || !pattern.test(argument[0])) {
 
