@@ -10,7 +10,9 @@ const main = () => {
 const argTester = () => {
 
     const argument = process.argv.slice(2);
-    const pattern = /^[0-9]{1,2}:[0-9]{2}$/;    
+    const pattern = /^[0-9]{1,2}:[0-9]{2}$/;
+    
+    const time = {};
 
     if (argument.length != 1 || !pattern.test(argument[0])) {
 
@@ -25,14 +27,14 @@ const argTester = () => {
 
     const argArr = argument[0].split(":");
 
-    const hours = parseInt(argArr[0]);
-    const minutes = parseInt(argArr[1]);
+    time.hours = parseInt(argArr[0]);
+    time.minutes = parseInt(argArr[1]);
 
     console.log(argArr);
-    console.log("hours: " + hours);
-    console.log("minutes: " + minutes);
+    console.log("hours: " + time.hours);
+    console.log("minutes: " + time.minutes);
     
-    if (hours > 24 || minutes >= 60) {
+    if (time.hours > 24 || time.minutes >= 60) {
 
         console.log("heure incorrecte");
         return false;
