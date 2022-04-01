@@ -6,8 +6,8 @@ const main = () => {
 const argTester = () => {
 
   const argument = process.argv.slice(2);
-
   const pattern = /^[0-9]{1,2}:[0-9]{2}(am|pm|AM|PM)$/;
+  const time = {};
 
   if (argument.length != 1 || !pattern.test(argument[0])) {
 
@@ -17,7 +17,13 @@ const argTester = () => {
 
   }
 
-  console.log(argument);
+  const argArr = argument[0].split(":");
+
+  time.hours = parseInt(argArr[0]);
+
+  console.log(time);
+
+  //console.log(argument);
 
 }
 
