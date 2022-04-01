@@ -20,7 +20,8 @@ const argTester = () => {
   const argArr = argument[0].split(":");
 
   time.hours = parseInt(argArr[0]);
-  time.meridiem = argArr[1].slice(2)
+  time.minutes = parseInt(argArr[1].slice(0,2));
+  time.meridiem = argArr[1].slice(2);
 
   console.log(time);
 
