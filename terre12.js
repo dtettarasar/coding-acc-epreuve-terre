@@ -6,6 +6,7 @@ const main = () => {
 
   if (argument) {
     const result = convertTime(argument);
+    console.log(result);
   }
 
 }
