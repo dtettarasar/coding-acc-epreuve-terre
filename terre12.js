@@ -3,8 +3,26 @@
 const main = () => {
 
   const argument = argTester();
-  console.log(argument);
 
+  if (argument) {
+    const result = convertTime(argument);
+  }
+
+}
+
+const convertTime = (time) => {
+
+  if (time.meridiem == "pm" || time.meridiem == "PM") {
+
+    time.hours += 12
+
+  }
+
+  const finalStr = time.hours + ":" + time.minutes;
+
+  console.log(time);
+
+  console.log(finalStr);
 }
 
 const argTester = () => {
