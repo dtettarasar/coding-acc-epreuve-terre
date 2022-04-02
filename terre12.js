@@ -1,6 +1,10 @@
 // Exercice 13 : 12 to 24
 
 const main = () => {
+
+  const argument = argTester();
+  console.log(argument);
+
 }
 
 const argTester = () => {
@@ -23,10 +27,17 @@ const argTester = () => {
   time.minutes = parseInt(argArr[1].slice(0,2));
   time.meridiem = argArr[1].slice(2);
 
-  console.log(time);
+  // console.log(time);
+
+  if (time.hours > 12 || time.minutes >= 60) {
+    console.log("heure incorrecte");
+    return false;
+  }
+
+  return time;
 
   //console.log(argument);
 
 }
 
-argTester();
+main();
