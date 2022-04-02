@@ -13,24 +13,25 @@ const main = () => {
 const convertTime = (time) => {
 
   let hourStr = null;
+  let minuteStr = null;
 
   let finalStr = "";
 
-  if (time.meridiem == "pm" || time.meridiem == "PM") {
+  if (time.meridiem == "pm") {
 
-    time.hours += 12;
+    hourStr = time.hours += 12;
 
-  } else if (time.hours < 12) {
+  } else if (time.hours < 10) {
 
     hourStr = "0" + time.hours;
 
+  } else {
+    hourStr = time.hours;
   }
 
-  if (hourStr) {
-      finalStr = hourStr + ":" + time.minutes;
-  } else {
-      finalStr = time.hours + ":" + time.minutes;
-  }
+  minuteStr = time.minutes < 10 ? "0" + time.minutes : time.minutes
+
+  finalStr = hourStr + ":" + minuteStr;
 
   console.log(time);
 
@@ -55,7 +56,7 @@ const argTester = () => {
 
   time.hours = parseInt(argArr[0]);
   time.minutes = parseInt(argArr[1].slice(0,2));
-  time.meridiem = argArr[1].slice(2);
+  time.meridiem = argArr[1].slice(2).toLowerCase();
 
   // console.log(time);
 
