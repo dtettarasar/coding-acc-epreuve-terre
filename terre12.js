@@ -12,13 +12,25 @@ const main = () => {
 
 const convertTime = (time) => {
 
+  let hourStr = null;
+
+  let finalStr = "";
+
   if (time.meridiem == "pm" || time.meridiem == "PM") {
 
-    time.hours += 12
+    time.hours += 12;
+
+  } else if (time.hours < 12) {
+
+    hourStr = "0" + time.hours;
 
   }
 
-  const finalStr = time.hours + ":" + time.minutes;
+  if (hourStr) {
+      finalStr = hourStr + ":" + time.minutes;
+  } else {
+      finalStr = time.hours + ":" + time.minutes;
+  }
 
   console.log(time);
 
