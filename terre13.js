@@ -31,6 +31,8 @@ const argTester = () => {
       return false;
     }
 
+    arguments[i] = parseInt(arguments[i]);
+
   }
 
   return arguments;
