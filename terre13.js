@@ -2,6 +2,12 @@
 
 const main = () => {
 
+  const arguments = argTester();
+
+  if (arguments) {
+    console.log(arguments);
+  }
+
 }
 
 const argTester = () => {
@@ -9,22 +15,26 @@ const argTester = () => {
   const arguments = process.argv.slice(2);
   const pattern = /^-?[0-9]+$/;
 
-  console.log(arguments);
+  const errorMsg = "Veuillez passer 3 nombres entiers en argument \nExemple : node terre13.js 5 7 2";
+
+  // console.log(arguments);
 
   if (arguments.length != 3) {
-    console.log("error: wrong number of arguments");
+    console.log(errorMsg);
     return false;
   }
 
   for (let i = 0; i < arguments.length; i++) {
 
     if (!pattern.test(arguments[i])) {
-      console.log("error: at least one arg is not a number");
+      console.log(errorMsg);
       return false;
     }
 
   }
 
+  return arguments;
+
 }
 
-argTester();
+main();
