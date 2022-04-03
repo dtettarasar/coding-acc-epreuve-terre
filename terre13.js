@@ -5,8 +5,37 @@ const main = () => {
   const arguments = argTester();
 
   if (arguments) {
-    console.log(arguments);
+
+    const result = findMiddle(arguments);
+
+    if (result) {
+      console.log(result);
+    }
+
   }
+
+}
+
+const findMiddle = (array) => {
+
+  const sortedArr = [];
+
+  if (array[0] == array[1] || array[0] == array[2] || array[1] == array[2]) {
+    console.log("Erreur : au moins 2 arguments sont identiques");
+    return false;
+  }
+
+  if (array[0] < array[1] && array[0] > array[2] || array[0] > array[1] && array[0] < array[2]) {
+    return array[0];
+  } else if (array[1] < array[0] && array[1] > array[2] || array[1] > array[0] && array[1] < array[2]) {
+    return array[1];
+  } else {
+    return array[2];
+  }
+
+  return 0;
+
+  //console.log(array);
 
 }
 
