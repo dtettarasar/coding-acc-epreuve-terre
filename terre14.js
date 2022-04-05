@@ -6,13 +6,20 @@ const main = () => {
 
     if (arguments) {
 
-        console.log(arguments);
-
-        const sortedArr = bubbleSort(arguments);
-
-        console.log(sortedArr);
+        const result = isSorted(arguments);
 
     }
+
+}
+
+const isSorted = (array) => {
+
+    const testArr = [...array];
+
+    const sortedArr = bubbleSort(testArr);
+
+    console.log(array);
+    console.log(sortedArr);
 
 }
 
