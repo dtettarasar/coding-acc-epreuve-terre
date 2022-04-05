@@ -4,8 +4,54 @@ const main = () => {
 
     const arguments = argTester();
 
-    console.log(arguments);
+    if (arguments) {
 
+        console.log(arguments);
+
+        const sortedArr = bubbleSort(arguments);
+
+        console.log(sortedArr);
+
+    }
+
+}
+
+const bubbleSort = (array) => {
+
+    //console.log(array);
+
+    const process = () => {
+
+        let arrIsSorted = true;
+
+        for (let i = 0;i < array.length; i++) {
+
+            //console.log(array[i]);
+
+            if (array[i] > array[i + 1]) {
+
+                arrIsSorted = false;
+
+                let smaller = array[i + 1];
+                let higher = array[i];
+
+                array[i] = smaller;
+                array[i + 1] = higher;
+
+            }
+
+            if (!arrIsSorted) {
+                process();
+            }
+
+        }
+
+    }
+
+    process();
+
+    return array;
+    
 }
 
 const argTester = () => {
