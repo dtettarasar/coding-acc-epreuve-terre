@@ -7,6 +7,12 @@ const main = () => {
     if (arguments) {
 
         const result = isSorted(arguments);
+        
+        if (result) {
+            console.log("Triée !");
+        } else {
+            console.log("Pas triée !");
+        }
 
     }
 
@@ -18,8 +24,20 @@ const isSorted = (array) => {
 
     const sortedArr = bubbleSort(testArr);
 
-    console.log(array);
-    console.log(sortedArr);
+    // console.log(array);
+    // console.log(sortedArr);
+
+    arrStr = array.join(",");
+    sortedArrStr = sortedArr.join(",");
+
+    // console.log(arrStr);
+    // console.log(sortedArrStr);
+
+    if (arrStr == sortedArrStr) {
+        return true;
+    } else {
+        return false;
+    }
 
 }
 
