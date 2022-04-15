@@ -35,8 +35,6 @@ const findMiddle = (array) => {
 
   return 0;
 
-  //console.log(array);
-
 }
 
 const argTester = () => {
@@ -45,8 +43,6 @@ const argTester = () => {
   const pattern = /^-?[0-9]+$/;
 
   const errorMsg = "Veuillez passer 3 nombres entiers en argument \nExemple : node terre13.js 5 7 2";
-
-  // console.log(arguments);
 
   if (arguments.length != 3) {
     console.log(errorMsg);
