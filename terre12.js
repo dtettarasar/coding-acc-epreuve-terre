@@ -34,9 +34,6 @@ const convertTime = (time) => {
 
   const finalStr = hourStr + ":" + minuteStr;
 
-  // console.log(time);
-  // console.log(finalStr);
-
   return finalStr;
 }
 
@@ -60,16 +57,12 @@ const argTester = () => {
   time.minutes = parseInt(argArr[1].slice(0,2));
   time.meridiem = argArr[1].slice(2).toLowerCase();
 
-  // console.log(time);
-
   if (time.hours > 12 || time.minutes >= 60 || time.hours == 12 && time.minutes != 00 && time.meridiem == "pm") {
     console.log("heure incorrecte");
     return false;
   }
 
   return time;
-
-  //console.log(argument);
 
 }
 
