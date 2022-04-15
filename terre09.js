@@ -24,17 +24,12 @@ const getSquareRoot = (arg) => {
 
     for (let i = 1; i <= int; i++) {
         const tester = i*i;
-        // console.log(i);
-        // console.log(tester);
-        // console.log("---");
         
         if (tester == int) {
             return i;
         }
 
     }
-
-    //console.log(int);
 
     return false;
     
