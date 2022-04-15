@@ -20,12 +20,8 @@ const calculPuissance = (firstNum, expos) => {
     
     let result = expos == 0 ? 1 : firstNumInt;
 
-    // console.log("first num:" + firstNumInt);
-    // console.log("expos:" + exposInt);
-
     for (let i = 1; i < exposInt; i++) {
         result *= firstNumInt;
-        // console.log(result);
     }
 
     if (isFirstNumNeg) {
