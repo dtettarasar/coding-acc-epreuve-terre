@@ -12,8 +12,6 @@ const main = () => {
         result = isPrimeNumber(argument);
     }
 
-    // console.log("result: " + result);
-
     if (result) {
     	 console.log("Oui, " + argument + " est un nombre premier.");
     } else if (argument) {
@@ -24,8 +22,6 @@ const main = () => {
 
 const isPrimeNumber = (int) => {
 
-    // console.log(int);
-
     if (int == 1) {
         return false;
     }
@@ -35,9 +31,6 @@ const isPrimeNumber = (int) => {
     for (let i = int; i > 0; i--){
 
         const modulo = int % i;
-        // console.log("i: " + i);
-        // console.log("modulo: " + modulo);
-        // console.log("---");
 
         if (modulo == 0) {
             divider.push(i);
@@ -48,9 +41,6 @@ const isPrimeNumber = (int) => {
         }
 
     }
-
-    // console.log("divider: ");
-    // console.log(divider);
 
     if (divider.length == 2 && divider[0] == int && divider[1] == 1) {
         return true;
