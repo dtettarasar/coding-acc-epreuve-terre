@@ -6,11 +6,6 @@ const pattern = /^[a-z]{1}$/;
 
 const argTester = pattern.test(args[0]);
 
-/*
-console.log(args)
-console.log(argTester);
-*/
-
 const getRemainingLetters = (letter) => {
     let letterFound = false;
     const container = [];
@@ -34,8 +29,6 @@ const getRemainingLetters = (letter) => {
 if (args.length != 1 || !argTester) {
     console.log("Veuillez passer une lettre minuscule en argument");
     console.log("Exemple : node terre03.js a");
-    return false;
 } else {
     console.log(getRemainingLetters(args[0]));
-    return true;
 }
