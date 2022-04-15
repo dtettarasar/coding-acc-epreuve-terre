@@ -24,14 +24,8 @@ const isSorted = (array) => {
 
     const sortedArr = bubbleSort(testArr);
 
-    // console.log(array);
-    // console.log(sortedArr);
-
     arrStr = array.join(",");
     sortedArrStr = sortedArr.join(",");
-
-    // console.log(arrStr);
-    // console.log(sortedArrStr);
 
     if (arrStr == sortedArrStr) {
         return true;
@@ -43,15 +37,11 @@ const isSorted = (array) => {
 
 const bubbleSort = (array) => {
 
-    //console.log(array);
-
     const process = () => {
 
         let arrIsSorted = true;
 
         for (let i = 0;i < array.length; i++) {
-
-            //console.log(array[i]);
 
             if (array[i] > array[i + 1]) {
 
@@ -97,10 +87,8 @@ const argTester = () => {
 
         for (let i = 0; i < arguments.length;i++) {
 
-            const argValid = pattern.test(arguments[i]);
-    
-            //console.log(arguments[i] + ": " + argValid);
-    
+            const argValid = pattern.test(arguments[i]);  
+
             if (!argValid) {
     
                 console.log(errorMsg);
@@ -115,9 +103,6 @@ const argTester = () => {
         }
 
     }
-
-    // console.log(arguments);
-    // console.log(intArr);
 
     return intArr;
 
