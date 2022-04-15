@@ -16,7 +16,7 @@ const main = () => {
 
     if (result) {
     	 console.log("Oui, " + argument + " est un nombre premier.");
-    } else {
+    } else if (argument) {
 	     console.log("Non, " + argument + " n'est pas un nombre premier.");
     }
 
