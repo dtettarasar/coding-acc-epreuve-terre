@@ -42,14 +42,8 @@ const argTester = () => {
   const intDividende = parseInt(args[0]);
   const intDiviseur = parseInt(args[1]);
 
-  //console.log("dividende: " + intDividende);
-  //console.log("diviseur: " + intDiviseur);
-
   const posDividende = intDividende < 0 ? intDividende * -1 : intDividende;
   const posDiviseur = intDiviseur < 0 ? intDiviseur * -1 : intDiviseur;
-
-  //console.log(posDividende);
-  //console.log(posDiviseur);
 
   if (posDiviseur > posDividende && posDividende != 0) {
     console.log("Attention: le diviseur doit être inférieur au dividende, indépendamment du signe !");
@@ -61,9 +55,6 @@ const argTester = () => {
 
   arguments.dividende = intDividende;
   arguments.diviseur = intDiviseur;
-
-  //console.log("arguments valides:");
-  //console.log(arguments);
 
   return arguments;
 
