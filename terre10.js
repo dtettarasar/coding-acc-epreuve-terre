@@ -6,7 +6,7 @@ const main = () => {
 
     let result = null;
 
-    if (argument == 0) {
+    if (!argument) {
         result = false;
     } else if (argument) {
         result = isPrimeNumber(argument);
@@ -14,7 +14,7 @@ const main = () => {
 
     if (result) {
     	 console.log("Oui, " + argument + " est un nombre premier.");
-    } else if (argument) {
+    } else if (argument || result == 0) {
 	     console.log("Non, " + argument + " n'est pas un nombre premier.");
     }
 
