@@ -37,37 +37,32 @@ const isSorted = (array) => {
 
 const bubbleSort = (array) => {
 
-    const process = () => {
+    let arrIsSorted = true;
 
-        let arrIsSorted = true;
+    for (let i = 0; i < array.length; i++) {
 
-        for (let i = 0;i < array.length; i++) {
+        if (array[i] > array[i + 1]) {
 
-            if (array[i] > array[i + 1]) {
+            arrIsSorted = false;
 
-                arrIsSorted = false;
+            let smaller = array[i + 1];
+            let higher = array[i];
 
-                let smaller = array[i + 1];
-                let higher = array[i];
+            array[i] = smaller;
+            array[i + 1] = higher;
 
-                array[i] = smaller;
-                array[i + 1] = higher;
+        }
 
-            }
-
-            if (!arrIsSorted) {
-                process();
-            }
-
+        if (!arrIsSorted) {
+            bubbleSort(array);
         }
 
     }
 
-    process();
-
     return array;
-    
+
 }
+
 
 const argTester = () => {
 
@@ -109,3 +104,5 @@ const argTester = () => {
 }
 
 main();
+
+//console.log(bubbleSortAlt([1,5,-7,12,2,3,56]));
