@@ -15,9 +15,13 @@ const main = () => {
 
 const convertTime = (time) => {
 
-    let anteOrPostMeridiem = time.hours > 12 ? "PM" : "AM";
+    let anteOrPostMeridiem = time.hours >= 12 ? "PM" : "AM";
     let hoursTwelve = time.hours > 12 ? time.hours - 12 : time.hours;
     let minutesTwelve = time.minutes > 10 ? time.minutes : "0" + time.minutes;
+
+    if (hoursTwelve == 0) {
+        hoursTwelve += 12;
+    }
 
     let timeTwelve = hoursTwelve + ":" + minutesTwelve + anteOrPostMeridiem;
 
