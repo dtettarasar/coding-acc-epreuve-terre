@@ -25,7 +25,7 @@ const getSquareRoot = (arg) => {
     for (let i = 1; i <= int; i++) {
         const tester = i*i;
         
-        if (tester == int) {
+        if (tester === int) {
             return i;
         }
 
@@ -40,7 +40,7 @@ const argTester = () => {
     const args = process.argv.slice(2);
     const pattern = /^[0-9]+$/;
 
-    if (args.length != 1 || !pattern.test(args[0])) {
+    if (args.length !== 1 || !pattern.test(args[0])) {
         console.log("Veuillez passer un entier positif en argument");
         console.log("Exemple : node terre09.js 9");
         return false;
