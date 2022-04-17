@@ -15,7 +15,7 @@ const evenOrOdd = () => {
 
     const modulo = strToInt % 2;
 
-    if (modulo == 1) {
+    if (modulo === 1) {
         console.log("impair");
     } else {
         console.log("pair");
@@ -23,7 +23,7 @@ const evenOrOdd = () => {
 
 }
 
-if (args.length != 1 || !argTester) {
+if (args.length !== 1 || !argTester) {
     console.log("Veuillez passer un nombre entier en argument");
     console.log("Exemple : node terre04.js 1");
 } else {
