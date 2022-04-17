@@ -27,7 +27,7 @@ const isSorted = (array) => {
     arrStr = array.join(",");
     sortedArrStr = sortedArr.join(",");
 
-    if (arrStr == sortedArrStr) {
+    if (arrStr === sortedArrStr) {
         return true;
     } else {
         return false;
