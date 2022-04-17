@@ -17,7 +17,7 @@ const getLength = (str) => {
 
   let i = 0;
 
-  while (i != strArr.length) {
+  while (i !== strArr.length) {
     i++;
   }
 
@@ -32,7 +32,7 @@ const argTester = () => {
 
     const pattern = /^-?[0-9]+$/;
 
-    if (args.length != 1 || pattern.test(args[0])) {
+    if (args.length !== 1 || pattern.test(args[0])) {
 
         console.log("Veuillez passer une chaîne de caractère en argument");
         console.log("Exemple : node terre07.js 'Freak on a Leash'");
