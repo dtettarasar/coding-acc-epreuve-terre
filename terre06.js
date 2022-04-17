@@ -30,7 +30,7 @@ const argTester = () => {
 
     const args = process.argv.slice(2);
 
-    if (args.length != 1) {
+    if (args.length !== 1) {
         console.log("Veuillez passer une chaîne de caractère en argument");
         console.log("Exemple : node terre06.js 'From Mars to Sirius'");
         return false;
