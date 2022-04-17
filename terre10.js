@@ -14,7 +14,7 @@ const main = () => {
 
     if (result) {
     	 console.log("Oui, " + argument + " est un nombre premier.");
-    } else if (argument || result == 0) {
+    } else if (argument || result === 0) {
 	     console.log("Non, " + argument + " n'est pas un nombre premier.");
     }
 
@@ -22,7 +22,7 @@ const main = () => {
 
 const isPrimeNumber = (int) => {
 
-    if (int == 1) {
+    if (int === 1) {
         return false;
     }
 
@@ -32,7 +32,7 @@ const isPrimeNumber = (int) => {
 
         const modulo = int % i;
 
-        if (modulo == 0) {
+        if (modulo === 0) {
             divider.push(i);
         }
 
@@ -42,7 +42,7 @@ const isPrimeNumber = (int) => {
 
     }
 
-    if (divider.length == 2 && divider[0] == int && divider[1] == 1) {
+    if (divider.length === 2 && divider[0] === int && divider[1] === 1) {
         return true;
     } else {
         return false;
@@ -55,7 +55,7 @@ const argTester = () => {
     const argument = process.argv.slice(2);
     const pattern = /^[0-9]+$/;
 
-    if (argument.length != 1 || !pattern.test(argument)) {
+    if (argument.length !== 1 || !pattern.test(argument)) {
         console.log("Veuillez passer un entier positif en argument");
         console.log("Exemple : node terre10.js 10");
         return false;
