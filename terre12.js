@@ -57,7 +57,7 @@ const argTester = () => {
   time.minutes = parseInt(argArr[1].slice(0,2));
   time.meridiem = argArr[1].slice(2).toLowerCase();
 
-  if (time.hours > 12 || time.minutes >= 60 || time.hours == 12 && time.minutes != 00 && time.meridiem == "pm") {
+  if (time.hours > 12 || time.minutes >= 60 || time.hours == 12 && time.minutes != 00 && time.meridiem == "pm" || time.hours == 0) {
     console.log("heure incorrecte");
     return false;
   }
