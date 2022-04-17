@@ -18,7 +18,7 @@ const calculPuissance = (firstNum, expos) => {
     const exposInt = parseInt(expos);
     const isFirstNumNeg = parseInt(firstNum) < 0 ? true : false;
     
-    let result = expos == 0 ? 1 : firstNumInt;
+    let result = expos === 0 ? 1 : firstNumInt;
 
     for (let i = 1; i < exposInt; i++) {
         result *= firstNumInt;
@@ -45,7 +45,7 @@ const argTester = () => {
   const testFirstNum = patternNegAndPos.test(firstNum);
   const testExpos = patternPosOnly.test(expos);
 
-  if (args.length != 2 || !testFirstNum || !testExpos) {
+  if (args.length !== 2 || !testFirstNum || !testExpos) {
     console.log("Veuillez passer deux nombres en arguments (l'exposant est passé en deuxième et doit être positif)");
     console.log("Exemple : node terre08.js 2 3");
     return false;
