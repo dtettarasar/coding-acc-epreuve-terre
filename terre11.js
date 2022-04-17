@@ -19,7 +19,7 @@ const convertTime = (time) => {
     let hoursTwelve = time.hours > 12 ? time.hours - 12 : time.hours;
     let minutesTwelve = time.minutes > 10 ? time.minutes : "0" + time.minutes;
 
-    if (hoursTwelve == 0) {
+    if (hoursTwelve === 0) {
         hoursTwelve += 12;
     }
 
@@ -36,7 +36,7 @@ const argTester = () => {
     
     const time = {};
 
-    if (argument.length != 1 || !pattern.test(argument[0])) {
+    if (argument.length !== 1 || !pattern.test(argument[0])) {
 
         console.log("Veuillez passer en argument, une heure au format 24h");
         console.log("Exemple : node terre11.js 00:42");
@@ -49,7 +49,7 @@ const argTester = () => {
     time.hours = parseInt(argArr[0]);
     time.minutes = parseInt(argArr[1]);
     
-    if (time.hours > 24 || time.minutes >= 60 || time.hours == 24 && time.minutes != 00) {
+    if (time.hours > 24 || time.minutes >= 60 || time.hours === 24 && time.minutes !== 00) {
 
         console.log("heure incorrecte");
         return false;
