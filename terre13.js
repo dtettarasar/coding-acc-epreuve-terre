@@ -20,7 +20,7 @@ const findMiddle = (array) => {
 
   const sortedArr = [];
 
-  if (array[0] == array[1] || array[0] == array[2] || array[1] == array[2]) {
+  if (array[0] === array[1] || array[0] === array[2] || array[1] === array[2]) {
     console.log("Erreur : au moins 2 arguments sont identiques");
     return false;
   }
@@ -44,7 +44,7 @@ const argTester = () => {
 
   const errorMsg = "Veuillez passer 3 nombres entiers en argument \nExemple : node terre13.js 5 7 2";
 
-  if (arguments.length != 3) {
+  if (arguments.length !== 3) {
     console.log(errorMsg);
     return false;
   }
