@@ -33,7 +33,7 @@ const argTester = () => {
 
   const arguments = {};
 
-  if (args.length != 2 || !testDividende || !testDiviseur) {
+  if (args.length !== 2 || !testDividende || !testDiviseur) {
       console.log("Veuillez passer deux nombres entiers en argument (le dividende, puis le diviseur)");
       console.log("Exemple : node terre05.js 10 2");
       return false;
@@ -45,10 +45,10 @@ const argTester = () => {
   const posDividende = intDividende < 0 ? intDividende * -1 : intDividende;
   const posDiviseur = intDiviseur < 0 ? intDiviseur * -1 : intDiviseur;
 
-  if (posDiviseur > posDividende && posDividende != 0) {
+  if (posDiviseur > posDividende && posDividende !== 0) {
     console.log("Attention: le diviseur doit être inférieur au dividende, indépendamment du signe !");
     return false;
-  } else if (posDiviseur == 0) {
+  } else if (posDiviseur === 0) {
     console.log("Attention: le diviseur doit être différent de 0 !");
     return false;
   }
