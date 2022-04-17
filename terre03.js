@@ -13,7 +13,7 @@ const getRemainingLetters = (letter) => {
 
     for (let i = 0; i < alphabet.length; i++) {
         
-        if (letter == alphabet[i]) {
+        if (letter === alphabet[i]) {
             letterFound = true;
         }
         
@@ -26,7 +26,7 @@ const getRemainingLetters = (letter) => {
     return container.join('');
 }
 
-if (args.length != 1 || !argTester) {
+if (args.length !== 1 || !argTester) {
     console.log("Veuillez passer une lettre minuscule en argument");
     console.log("Exemple : node terre03.js a");
 } else {
