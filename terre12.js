@@ -16,13 +16,17 @@ const convertTime = (time) => {
   let hourStr = null;
   let minuteStr = null;
 
-  if (time.meridiem == "pm") {
+  if (time.meridiem == "pm" && time.hours != 12) {
 
     hourStr = time.hours += 12;
 
-  } else if (time.hours < 10) {
+  } else if (time.meridiem == "am" && time.hours < 10) {
 
     hourStr = "0" + time.hours;
+
+  } else if (time.meridiem == "am" && time.hours == 12) {
+
+    hourStr = "00";
 
   } else {
 
@@ -57,7 +61,7 @@ const argTester = () => {
   time.minutes = parseInt(argArr[1].slice(0,2));
   time.meridiem = argArr[1].slice(2).toLowerCase();
 
-  if (time.hours > 12 || time.minutes >= 60 || time.hours == 12 && time.minutes != 00 && time.meridiem == "pm" || time.hours == 0) {
+  if (time.hours > 12 || time.minutes >= 60 || time.hours == 0) {
     console.log("heure incorrecte");
     return false;
   }
